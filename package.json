@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/epixa/jsclient/issues"
   },
-  "homepage": "https://github.com/epixa/jsclient"
+  "homepage": "https://github.com/epixa/jsclient",
+  "scripts": {
+    "test": "node example"
+  }
 }

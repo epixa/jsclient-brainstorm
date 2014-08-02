@@ -19,4 +19,8 @@ items.forEach(function(item) {
   console.log(item.name); // blah
 });
 
-items.$reload(); // expected to error since $reload() is not implemented
+try {
+  items.$reload(); // expected to error since $reload() is not implemented
+} catch (e) {
+  console.log('expected error:', e);
+}
