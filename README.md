@@ -2,9 +2,32 @@
 
 Very much a work in progress.
 
-```javascript
-'use strict';
 
+### Constributing
+
+To install package dependencies for development:
+
+```
+npm install
+```
+
+To run tests:
+
+```
+npm test
+```
+
+To contribute code, issue pull requests at https://github.com/epixa/jsclient/pulls
+
+
+### Example API
+
+An example "todo list" API client built with JSclient is available in the `example/` directory.
+
+
+### Temporary placeholder for recommended api design
+
+```javascript
 var ApiClient = require('./lib/client');
 var client = new ApiClient();
 
