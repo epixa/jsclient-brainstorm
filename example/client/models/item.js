@@ -7,6 +7,7 @@ var Item = client.model('item')
 .attribute('id')
 .attribute('name')
 .attribute('description')
+.hasOne('parent', { nullable: true })
 .hasOne('user');
 
 Item.prototype.$save = function() {

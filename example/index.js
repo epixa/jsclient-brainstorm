@@ -8,7 +8,8 @@ item.user = 123;
 item.$save(); // request {...}
 
 console.log(item.user); // [Function]
-console.log(item.$associations.user.original); // 123
+console.log(item.$associations.user.value); // 123
+console.log(item.parent()); // null
 console.log(item.user()); // {id: null, name: null, email: null, ...}
 
 var list = new (client.model('list'))();
