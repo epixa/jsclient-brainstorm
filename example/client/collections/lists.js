@@ -2,6 +2,8 @@
 
 var client = require('../example');
 
-var Lists = client.collection('lists');
+var Lists = client.collection('lists', {
+  model: 'list'
+});
 
 module.exports = Lists;

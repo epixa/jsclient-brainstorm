@@ -37,6 +37,21 @@ items.forEach(function(item) {
   console.log(item.name); // blah
 });
 
+var otherItems = new (client.collection('items'))([
+  { id: 1, name: 'foo' },
+  { id: 2, name: 'bar' },
+]);
+console.log(otherItems.length); // 2
+console.log(otherItems[0].parent); // [Function]
+console.log(otherItems[1].parent); // [Function]
+
+var collectionOfStrings = new (client.collection('blah'))([
+  'foo', 'bar'
+]);
+console.log(collectionOfStrings.length); // 2
+console.log(collectionOfStrings[0]); // foo
+console.log(collectionOfStrings[1]); // bar
+
 try {
   items.$reload(); // expected to error since $reload() is not implemented
 } catch (e) {
