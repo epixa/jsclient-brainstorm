@@ -1,4 +1,5 @@
 # Library for API Clients
+[![Build Status](https://travis-ci.org/epixa/jsclient.svg?branch=master)](https://travis-ci.org/epixa/jsclient)
 
 Very much a work in progress.
 
