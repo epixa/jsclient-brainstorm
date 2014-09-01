@@ -16,7 +16,11 @@ var list = new (client.model('list'))();
 list.$save(); // save list {...}
 
 console.log(list.items); // [Function]
-console.log(list.items()); // {}
+try {
+  console.log(list.items()); // expected to error since `items` is not nullable and does not yet have a value
+} catch (e) {
+  console.log('expected error:', e);
+}
 
 var items = new (client.collection('items'))();
 items.$load(); // load items
