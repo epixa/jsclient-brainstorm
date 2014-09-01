@@ -7,8 +7,8 @@ var Item = client.model('item')
 .attribute('id')
 .attribute('name')
 .attribute('description')
-.hasOne('parent', { nullable: true })
-.hasOne('user', { alias_of: 'user_id' });
+.hasOne('parent', { nullable: true, model: 'item' })
+.hasOne('author', { alias_of: 'user_id', model: 'user' });
 
 Item.prototype.$save = function() {
   return client.action('create-item')({

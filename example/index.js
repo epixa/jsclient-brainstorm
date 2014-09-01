@@ -7,13 +7,13 @@ item.name = 'blah';
 item.user_id = 123;
 item.$save(); // request {...}
 
-console.log(item.user); // [Function]
-console.log(item.$associations.user.value); // 123
+console.log(item.author); // [Function]
+console.log(item.$associations.author.value); // 123
 console.log(item.parent()); // null
-console.log(item.user()); // {id: null, name: null, email: null, ...}
+console.log(item.author()); // {id: null, name: null, email: null, ...}
 
-item.user = 234;
-console.log(item.$associations.user.value); // 234
+item.author = 234;
+console.log(item.$associations.author.value); // 234
 console.log(item.user_id); // 234
 
 var list = new (client.model('list'))();
