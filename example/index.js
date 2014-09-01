@@ -4,13 +4,17 @@ var client = require('./client/example');
 
 var item = new (client.model('item'))();
 item.name = 'blah';
-item.user = 123;
+item.user_id = 123;
 item.$save(); // request {...}
 
 console.log(item.user); // [Function]
 console.log(item.$associations.user.value); // 123
 console.log(item.parent()); // null
 console.log(item.user()); // {id: null, name: null, email: null, ...}
+
+item.user = 234;
+console.log(item.$associations.user.value); // 234
+console.log(item.user_id); // 234
 
 var list = new (client.model('list'))();
 list.$save(); // save list {...}
