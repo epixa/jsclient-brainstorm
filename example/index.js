@@ -2,9 +2,10 @@
 
 var client = require('./client/example');
 
-var item = new (client.model('item'))();
-item.name = 'blah';
-item.user_id = 123;
+var item = new (client.model('item'))({
+  name: 'blah',
+  user_id: 123
+});
 item.$save(); // request {...}
 
 console.log(item.author); // [Function]
