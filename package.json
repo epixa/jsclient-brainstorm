@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/epixa/jsclient",
   "scripts": {
-    "test": "jasmine-node specs --verbose --captureExceptions"
+    "example": "node example",
+    "test": "jasmine-node specs --color --verbose --captureExceptions",
+    "dev": "jasmine-node specs --color --verbose --captureExceptions --autotest --watch `pwd`"
   },
   "devDependencies": {
-    "jasmine-node": "1.3.x"
+    "jasmine-node": "1.14.x"
   }
 }
